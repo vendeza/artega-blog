@@ -1,36 +1,58 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
 
-class IndexPage extends React.Component {
-  render() {
-    const siteTitle = "Artega"
-
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title="Home"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
-        <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" />
-        <h1>
-          Hey people{" "}
-          <span role="img" aria-label="wave emoji">
-            👋
-          </span>
-        </h1>
-        <p>Mobile creative agency</p>
-        <p>Arthur and Artem</p>
-        <p>Now go build something great!</p>
-        <Link to="/blog/">
-          <Button marginTop="35px">Go to Blog</Button>
-        </Link>
-      </Layout>
-    )
-  }
-}
+const IndexPage = ({ data }) => (
+  <Layout>
+    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <ul style={{ listStyle: "none" }}>
+      {data.allWordpressPost.edges.map(post => (
+        <li style={{ padding: "20px 0", borderBottom: "1px solid #ccc" }}>
+          <Link
+            to={`/post/${post.node.slug}`}
+            style={{ display: "flex", color: "black", textDecoration: "none" }}
+          >
+            {/* <Img
+              sizes={post.node.acf.feat_img.localFile.childImageSharp.sizes}
+              alt={post.node.title}
+              style={{ width: "25%", marginRight: 20 }}
+            /> */}
+            <div style={{ width: "75%" }}>
+              <h3
+                dangerouslySetInnerHTML={{ __html: post.node.title }}
+                style={{ marginBottom: 0 }}
+              />
+              <p style={{ margin: 0, color: "grey" }}>
+                Written by {post.node.author.name} on {post.node.date}
+              </p>
+              <div dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+            </div>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </Layout>
+)
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    allWordpressPost {
+      edges {
+        node {
+          title
+          excerpt
+          slug
+          author {
+            name
+          }
+          date(formatString: "MMMM DD, YYYY")
+        }
+      }
+    }
+  }
+`
