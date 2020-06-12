@@ -1,58 +1,134 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import servize from "../images/servize.png"
+import battery from "../images/800Battery.png"
+import ezenciel from "../images/ezenciel.png"
 
-const IndexPage = ({ data }) => (
+import arthur from "../images/arthur.png"
+import artem from "../images/artem.png"
+
+const SecondPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <ul style={{ listStyle: "none" }}>
-      {data.allWordpressPost.edges.map(post => (
-        <li style={{ padding: "20px 0", borderBottom: "1px solid #ccc" }}>
-          <Link
-            to={`/post/${post.node.slug}`}
-            style={{ display: "flex", color: "black", textDecoration: "none" }}
-          >
-            {/* <Img
-              sizes={post.node.acf.feat_img.localFile.childImageSharp.sizes}
-              alt={post.node.title}
-              style={{ width: "25%", marginRight: 20 }}
-            /> */}
-            <div style={{ width: "75%" }}>
-              <h3
-                dangerouslySetInnerHTML={{ __html: post.node.title }}
-                style={{ marginBottom: 0 }}
-              />
-              <p style={{ margin: 0, color: "grey" }}>
-                Written by {post.node.author.name} on {post.node.date}
-              </p>
-              <div dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
-            </div>
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <SEO title="Page two" />
+    <h1
+      style={{
+        marginTop: 40,
+        marginBottom: 60,
+        fontWeight: 400,
+        fontSize: 30,
+        opacity: 0.8,
+      }}
+    >
+      works
+    </h1>
+    <div className="works" style={{ display: "flex" }}>
+      <div className="work">
+        <Link
+          to={`https://play.google.com/store/apps/details?id=com.rnbookingapp&hl=ru`}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            color: "white",
+            textDecoration: "none",
+            textAlign: "center",
+          }}
+        >
+          <img src={servize} />
+          <p style={{ color: "#aaa", marginTop: 20 }}>Servize</p>
+        </Link>
+      </div>
+      <div className="work" style={{ marginLeft: 90 }}>
+        <Link
+          to={`https://apps.apple.com/gb/app/800battery/id1516528654`}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            color: "white",
+            textDecoration: "none",
+            textAlign: "center",
+          }}
+        >
+          <img src={battery} />
+          <p style={{ color: "#aaa", marginTop: 20 }}>800Battery</p>
+        </Link>
+      </div>
+      <div className="work" style={{ marginLeft: 90 }}>
+        <Link
+          to={`https://apps.apple.com/ru/app/ezenciel/id1479058033`}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            color: "white",
+            textDecoration: "none",
+            textAlign: "center",
+          }}
+        >
+          <img src={ezenciel} />
+          <p style={{ color: "#aaa", marginTop: 70 }}>Servize</p>
+        </Link>
+      </div>
+    </div>
+    <h1
+      style={{
+        marginTop: 30,
+        marginBottom: 60,
+        fontWeight: 400,
+        fontSize: 30,
+        opacity: 0.8,
+      }}
+    >
+      squad
+    </h1>
+    <div className="team" style={{ display: "flex" }}>
+      <div className="employee">
+        <Link
+          to={`/`}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            color: "white",
+            textDecoration: "none",
+          }}
+        >
+          <img
+            style={{ color: "#aaa", marginTop: 20, width: 130 }}
+            src={arthur}
+          />
+          <p style={{ color: "#ccc", marginTop: 20, marginBottom: 0 }}>
+            Arthur A.
+          </p>
+          <p style={{ color: "#aaa", marginTop: 0, fontSize: 14 }}>
+            Alfa Developer, Quality Qeen, Evil genius
+          </p>
+        </Link>
+      </div>
+      <div className="employee" style={{ marginLeft: 190 }}>
+        <Link
+          to={`/`}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            color: "white",
+            textDecoration: "none",
+          }}
+        >
+          <img
+            style={{ color: "#aaa", marginTop: 20, width: 130 }}
+            src={artem}
+          />
+          <p style={{ color: "#ccc", marginTop: 20, marginBottom: 0 }}>
+            Artem A.
+          </p>
+          <p style={{ color: "#aaa", marginTop: 0, fontSize: 14 }}>
+            Manager, Slave owner, Money maker
+          </p>
+        </Link>
+      </div>
+    </div>
   </Layout>
 )
 
-export default IndexPage
-
-export const query = graphql`
-  query {
-    allWordpressPost {
-      edges {
-        node {
-          title
-          excerpt
-          slug
-          author {
-            name
-          }
-          date(formatString: "MMMM DD, YYYY")
-        }
-      }
-    }
-  }
-`
+export default SecondPage
