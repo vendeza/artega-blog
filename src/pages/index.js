@@ -3,9 +3,10 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import servize from "../images/servize.png"
-import battery from "../images/800Battery.png"
-import ezenciel from "../images/ezenciel.png"
+import servize from "../images/e1.png"
+import battery from "../images/e2.png"
+import ezenciel from "../images/e3.png"
+import lumberwell from "../images/e4.png"
 
 import arthur from "../images/arthur.png"
 import artem from "../images/artem.png"
@@ -37,10 +38,9 @@ const SecondPage = () => (
           }}
         >
           <img src={servize} />
-          <p style={{ color: "#aaa", marginTop: 20 }}>Servize</p>
         </Link>
       </div>
-      <div className="work" style={{ marginLeft: 90 }}>
+      <div className="work" style={{ marginLeft: 0 }}>
         <Link
           to={`https://apps.apple.com/gb/app/800battery/id1516528654`}
           style={{
@@ -52,10 +52,9 @@ const SecondPage = () => (
           }}
         >
           <img src={battery} />
-          <p style={{ color: "#aaa", marginTop: 20 }}>800Battery</p>
         </Link>
       </div>
-      <div className="work" style={{ marginLeft: 90 }}>
+      <div className="work" style={{ marginLeft: 0 }}>
         <Link
           to={`https://apps.apple.com/ru/app/ezenciel/id1479058033`}
           style={{
@@ -67,7 +66,20 @@ const SecondPage = () => (
           }}
         >
           <img src={ezenciel} />
-          <p style={{ color: "#aaa", marginTop: 70 }}>Servize</p>
+        </Link>
+      </div>
+      <div className="work" style={{ marginLeft: 0 }}>
+        <Link
+          to={`https://play.google.com/store/apps/details?id=com.holybyte.lumber.well`}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            color: "white",
+            textDecoration: "none",
+            textAlign: "center",
+          }}
+        >
+          <img src={lumberwell} />
         </Link>
       </div>
     </div>
@@ -82,7 +94,14 @@ const SecondPage = () => (
     >
       squad
     </h1>
-    <div className="team" style={{ display: "flex" }}>
+    <div
+      className="team"
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        flexWrap: "wrap",
+      }}
+    >
       <div className="employee">
         <Link
           to={`/`}
@@ -105,7 +124,7 @@ const SecondPage = () => (
           </p>
         </Link>
       </div>
-      <div className="employee" style={{ marginLeft: 190 }}>
+      <div className="employee" style={{}}>
         <Link
           to={`/`}
           style={{

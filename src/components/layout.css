@@ -3,6 +3,11 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+.works {
+  flex-wrap: wrap;
+}
+.work {
+}
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
