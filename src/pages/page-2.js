@@ -10,7 +10,13 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <ul style={{ listStyle: "none" }}>
       {data.allWordpressPost.edges.map(post => (
-        <li style={{ padding: "20px 0", borderBottom: "1px solid #ccc" }}>
+        <li
+          style={{
+            padding: "20px 0",
+            color: "#eee",
+            borderBottom: "1px solid #ccc",
+          }}
+        >
           <Link
             to={`/post/${post.node.slug}`}
             style={{ display: "flex", color: "white", textDecoration: "none" }}

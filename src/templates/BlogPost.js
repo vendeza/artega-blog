@@ -20,7 +20,7 @@ const BlogPostTemplate = ({ data }) => (
       style={{ maxHeight: 450 }}
     /> */}
     <div
-      style={{ marginTop: 20 }}
+      style={{ marginTop: 20, color: "#eee" }}
       dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}
     />
   </Layout>

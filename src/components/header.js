@@ -14,7 +14,7 @@ const Header = () => (
     render={data => (
       <header
         style={{
-          background: `rgb(20, 29, 35)`,
+          top: 270,
           marginBottom: `1.45rem`,
         }}
       >
@@ -36,7 +36,37 @@ const Header = () => (
                 textDecoration: `none`,
               }}
             >
-              <img src={logo} style={{ height: 50, width: 50 }} />
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
+                <img src={logo} style={{ height: 50, width: 50 }} />
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    marginLeft: 10,
+                  }}
+                >
+                  <p style={{ marginBottom: 0, marginLeft: 10, fontSize: 14 }}>
+                    web & mobile tech
+                  </p>
+                  <p
+                    style={{
+                      marginTop: 1,
+                      marginBottom: 0,
+                      marginLeft: 10,
+                      fontSize: 15,
+                    }}
+                  >
+                    for your business
+                  </p>
+                </div>
+              </div>
               {/* {data.wordpressSiteMetadata.name} */}
               {/* <Img
                   sizes={post.node.acf.feat_img.localFile.childImageSharp.sizes}

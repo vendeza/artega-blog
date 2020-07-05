@@ -17,10 +17,10 @@ const SecondPage = () => (
     <h1
       style={{
         marginTop: 40,
-        marginBottom: 60,
+        marginBottom: 40,
         fontWeight: 400,
-        fontSize: 30,
-        opacity: 0.8,
+        fontSize: 20,
+        opacity: 0.9,
       }}
     >
       works
@@ -85,11 +85,11 @@ const SecondPage = () => (
     </div>
     <h1
       style={{
-        marginTop: 30,
-        marginBottom: 60,
+        marginTop: 100,
+        marginBottom: 40,
         fontWeight: 400,
-        fontSize: 30,
-        opacity: 0.8,
+        fontSize: 20,
+        opacity: 0.9,
       }}
     >
       squad
@@ -116,7 +116,7 @@ const SecondPage = () => (
             style={{ color: "#aaa", marginTop: 20, width: 130 }}
             src={arthur}
           />
-          <p style={{ color: "#ccc", marginTop: 20, marginBottom: 0 }}>
+          <p style={{ color: "#eee", marginTop: 20, marginBottom: 0 }}>
             Arthur A.
           </p>
           <p style={{ color: "#aaa", marginTop: 0, fontSize: 14 }}>
@@ -138,7 +138,7 @@ const SecondPage = () => (
             style={{ color: "#aaa", marginTop: 20, width: 130 }}
             src={artem}
           />
-          <p style={{ color: "#ccc", marginTop: 20, marginBottom: 0 }}>
+          <p style={{ color: "#eee", marginTop: 20, marginBottom: 0 }}>
             Artem A.
           </p>
           <p style={{ color: "#aaa", marginTop: 0, fontSize: 14 }}>
