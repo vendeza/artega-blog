@@ -1,7 +1,7 @@
-import { StaticQuery, graphql, Link } from "gatsby"
-import React from "react"
-import Img from "gatsby-image"
-import logo from "../images/artega_logo.png"
+import { StaticQuery, graphql, Link } from "gatsby";
+import React from "react";
+import Img from "gatsby-image";
+import logo from "../images/artega_logo.png";
 const Header = () => (
   <StaticQuery
     query={graphql`
@@ -11,7 +11,7 @@ const Header = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <header
         style={{
           top: 270,
@@ -52,10 +52,10 @@ const Header = () => (
                     marginLeft: 10,
                   }}
                 >
-                  <p style={{ marginBottom: 0, marginLeft: 10, fontSize: 14 }}>
+                  {/* <p style={{ marginBottom: 0, marginLeft: 10, fontSize: 14 }}>
                     web & mobile tech
-                  </p>
-                  <p
+                  </p> */}
+                  {/* <p
                     style={{
                       marginTop: 1,
                       marginBottom: 0,
@@ -64,7 +64,7 @@ const Header = () => (
                     }}
                   >
                     for your business
-                  </p>
+                  </p> */}
                 </div>
               </div>
               {/* {data.wordpressSiteMetadata.name} */}
@@ -81,7 +81,7 @@ const Header = () => (
               <Link
                 to="/"
                 style={{
-                  marginLeft: 10,
+                  marginLeft: 20,
                   fontSize: 14,
                   color: `#bbb`,
                 }}
@@ -91,9 +91,21 @@ const Header = () => (
             </li>
             <li>
               <Link
+                to="/about-us/"
+                style={{
+                  marginLeft: 20,
+                  fontSize: 14,
+                  color: `#bbb`,
+                }}
+              >
+                About us
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/page-2/"
                 style={{
-                  marginLeft: 10,
+                  marginLeft: 20,
                   fontSize: 14,
                   color: `#bbb`,
                 }}
@@ -120,6 +132,6 @@ const Header = () => (
       </header>
     )}
   />
-)
+);
 
-export default Header
+export default Header;

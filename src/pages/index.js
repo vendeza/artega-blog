@@ -1,15 +1,15 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import servize from "../images/e1.png"
-import battery from "../images/e2.png"
-import ezenciel from "../images/e3.png"
-import lumberwell from "../images/e4.png"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import servize from "../images/e1.png";
+import battery from "../images/e2.png";
+import ezenciel from "../images/e3.png";
+import lumberwell from "../images/e4.png";
 
-import arthur from "../images/arthur.png"
-import artem from "../images/artem.png"
+import arthur from "../images/arthur.png";
+import artem from "../images/artem.png";
 
 const SecondPage = () => (
   <Layout>
@@ -21,9 +21,22 @@ const SecondPage = () => (
         fontWeight: 400,
         fontSize: 20,
         opacity: 0.9,
+        lineHeight: 1.6,
       }}
     >
-      works
+      Helping small and medium-sized enterprises get
+      <br /> profit with mobile and web applications
+    </h1>
+    <h1
+      style={{
+        marginTop: 40,
+        marginBottom: 40,
+        fontWeight: 400,
+        fontSize: 20,
+        opacity: 0.9,
+      }}
+    >
+      Works
     </h1>
     <div className="works" style={{ display: "flex" }}>
       <div className="work">
@@ -82,7 +95,10 @@ const SecondPage = () => (
           <img src={lumberwell} />
         </Link>
       </div>
-    </div>
+    </div>{" "}
+    <Link style={{ color: "#eee" }} to={`/works/`}>
+      more
+    </Link>
     <h1
       style={{
         marginTop: 100,
@@ -92,8 +108,38 @@ const SecondPage = () => (
         opacity: 0.9,
       }}
     >
-      squad
+      How we work
     </h1>
+    <ul
+      style={{
+        color: "#eee",
+      }}
+    >
+      <li>We discuss with you about problems your business or ideas.</li>
+      <li>We deep reasearch your context</li>
+      <li>We suggest you the best solution</li>
+      <li>We create esstimate document and discuss it with you</li>
+      <li>
+        Here we start to develop application using{"  "}
+        <Link
+          style={{
+            color: "#777",
+          }}
+          to="https://en.wikipedia.org/wiki/Continuous_delivery"
+        >
+          Continuous delivery
+        </Link>
+        <br /> and demostrate you result after 1-2 weeks.
+      </li>
+      <li>
+        Continious comunicate with you, <br />
+        Get callback from your customers <br />
+        Update fetures <br />
+        Fix bugs <br />
+        Add new features <br />
+      </li>
+      <li>Support your app</li>
+    </ul>
     <div
       className="team"
       style={{
@@ -101,53 +147,28 @@ const SecondPage = () => (
         justifyContent: "space-between",
         flexWrap: "wrap",
       }}
+    ></div>
+    <h1
+      style={{
+        marginTop: 100,
+        marginBottom: 40,
+        fontWeight: 400,
+        fontSize: 20,
+        opacity: 0.9,
+      }}
     >
-      <div className="employee">
-        <Link
-          to={`/`}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            color: "white",
-            textDecoration: "none",
-          }}
-        >
-          <img
-            style={{ color: "#aaa", marginTop: 20, width: 130 }}
-            src={arthur}
-          />
-          <p style={{ color: "#eee", marginTop: 20, marginBottom: 0 }}>
-            Arthur A.
-          </p>
-          <p style={{ color: "#aaa", marginTop: 0, fontSize: 14 }}>
-            Alfa Developer, Quality Qeen, Evil genius
-          </p>
-        </Link>
-      </div>
-      <div className="employee" style={{}}>
-        <Link
-          to={`/`}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            color: "white",
-            textDecoration: "none",
-          }}
-        >
-          <img
-            style={{ color: "#aaa", marginTop: 20, width: 130 }}
-            src={artem}
-          />
-          <p style={{ color: "#eee", marginTop: 20, marginBottom: 0 }}>
-            Artem A.
-          </p>
-          <p style={{ color: "#aaa", marginTop: 0, fontSize: 14 }}>
-            Manager, Slave owner, Money maker
-          </p>
-        </Link>
-      </div>
-    </div>
+      Prices
+    </h1>
+    <ul
+      style={{
+        color: "#eee",
+      }}
+    >
+      <li>Mobile application start from: 800$ </li>
+      <li>Web application start from: 500$</li>
+      <li>UX/UI design start from: 500$</li>
+    </ul>
   </Layout>
-)
+);
 
-export default SecondPage
+export default SecondPage;
