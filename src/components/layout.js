@@ -12,7 +12,7 @@ import { StaticQuery, graphql } from "gatsby";
 import Header from "./header";
 import "./layout.css";
 import { relative } from "path";
-import background from "../images/bg1.jpg";
+import background from "../images/bg1.png";
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -56,6 +56,7 @@ const Layout = ({ children }) => (
             }}
           >
             <img
+              alt={"artega"}
               style={{ alignSelf: "center", width: 1200 }}
               src={background}
             />

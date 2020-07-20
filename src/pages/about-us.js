@@ -3,10 +3,6 @@ import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import servize from "../images/e1.png";
-import battery from "../images/e2.png";
-import ezenciel from "../images/e3.png";
-import lumberwell from "../images/e4.png";
 
 import arthur from "../images/arthur.png";
 import artem from "../images/artem.png";
@@ -56,6 +52,7 @@ const AboutUsPage = () => (
             }}
           >
             <img
+              alt={"artega"}
               style={{ color: "#aaa", marginTop: 20, width: 130 }}
               src={arthur}
             />
@@ -78,6 +75,7 @@ const AboutUsPage = () => (
             }}
           >
             <img
+              alt={"artega"}
               style={{ color: "#aaa", marginTop: 20, width: 130 }}
               src={artem}
             />

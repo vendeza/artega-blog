@@ -8,9 +8,6 @@ import battery from "../images/e2.png";
 import ezenciel from "../images/e3.png";
 import lumberwell from "../images/e4.png";
 
-import arthur from "../images/arthur.png";
-import artem from "../images/artem.png";
-
 const SecondPage = () => (
   <Layout>
     <SEO title="Page two" />
@@ -51,7 +48,7 @@ const SecondPage = () => (
             textAlign: "center",
           }}
         >
-          <img src={servize} />
+          <img alt={"artega"} src={servize} />
         </Link>
       </div>
       <div className="work" style={{ marginLeft: 0 }}>
@@ -79,7 +76,7 @@ const SecondPage = () => (
             textAlign: "center",
           }}
         >
-          <img src={ezenciel} />
+          <img alt={"artega"} src={ezenciel} />
         </Link>
       </div>
       <div className="work" style={{ marginLeft: 0 }}>
@@ -93,7 +90,7 @@ const SecondPage = () => (
             textAlign: "center",
           }}
         >
-          <img src={lumberwell} />
+          <img alt={"artega"} src={lumberwell} />
         </Link>
       </div>
     </div>{" "}
@@ -125,7 +122,7 @@ const SecondPage = () => (
         Here we start to develop an application using {"  "}
         <Link
           style={{
-            color: "#777",
+            color: "#aaa",
           }}
           to="https://en.wikipedia.org/wiki/Continuous_delivery"
         >
