@@ -12,7 +12,10 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1e262f;
+  /* background-image: url("../images/bg3.png");
+  background-repeat: no-repeat; */
+  /* background-color: #adadad; */
+  background-color: #202020;
 }
 article,
 aside,

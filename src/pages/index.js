@@ -18,22 +18,23 @@ const SecondPage = () => (
       style={{
         marginTop: 40,
         marginBottom: 40,
-        fontWeight: 400,
-        fontSize: 20,
+        fontWeight: 900,
+        fontSize: 50,
         opacity: 0.9,
-        lineHeight: 1.6,
+        lineHeight: 1.1,
+        textTransform: "uppercase",
       }}
     >
-      Helping small and medium-sized enterprises get
-      <br /> profit with mobile and web applications
+      We craft awesome apps
     </h1>
     <h1
       style={{
-        marginTop: 40,
-        marginBottom: 40,
-        fontWeight: 400,
-        fontSize: 20,
+        marginTop: 50,
+        marginBottom: 50,
+        fontWeight: 600,
+        fontSize: 40,
         opacity: 0.9,
+        textTransform: "uppercase",
       }}
     >
       Works
@@ -103,9 +104,10 @@ const SecondPage = () => (
       style={{
         marginTop: 100,
         marginBottom: 40,
-        fontWeight: 400,
-        fontSize: 20,
+        fontWeight: 600,
+        fontSize: 40,
         opacity: 0.9,
+        textTransform: "uppercase",
       }}
     >
       How we work
@@ -115,12 +117,12 @@ const SecondPage = () => (
         color: "#eee",
       }}
     >
-      <li>We discuss with you about problems your business or ideas.</li>
-      <li>We deep reasearch your context</li>
+      <li>We discuss your business problems or ideas.</li>
+      <li>We deep research your business area</li>
       <li>We suggest you the best solution</li>
-      <li>We create esstimate document and discuss it with you</li>
+      <li>We create estimate document and discuss it with you</li>
       <li>
-        Here we start to develop application using{"  "}
+        Here we start to develop an application using {"  "}
         <Link
           style={{
             color: "#777",
@@ -129,11 +131,12 @@ const SecondPage = () => (
         >
           Continuous delivery
         </Link>
-        <br /> and demostrate you result after 1-2 weeks.
+        <br /> and demonstrate to you the result after 1-2 weeks.
       </li>
       <li>
-        Continious comunicate with you, <br />
-        Get callback from your customers <br />
+        Continuously communicate with you <br />
+        Get a callback from your customers
+        <br />
         Update fetures <br />
         Fix bugs <br />
         Add new features <br />
