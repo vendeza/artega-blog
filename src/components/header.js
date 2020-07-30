@@ -14,7 +14,7 @@ const Header = () => (
     render={(data) => (
       <header
         style={{
-          top: -30,
+          top: 30,
           position: "relative",
           zIndex: 12,
           marginBottom: `1.45rem`,

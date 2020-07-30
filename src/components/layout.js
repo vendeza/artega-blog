@@ -12,7 +12,7 @@ import { StaticQuery, graphql } from "gatsby";
 import Header from "./header";
 import "./layout.css";
 import { relative } from "path";
-import background from "../images/bg1.png";
+import background from "../images/bg1.webp";
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -25,49 +25,49 @@ const Layout = ({ children }) => (
       }
     `}
     render={(data) => (
-      <div style={{ position: "relative", top: "70px" }}>
+      <div style={{ position: "relative",  backgroundColor:"#000" }}>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            backgroundColor: "#000",
-            opacity: 0.6,
-            zIndex: 2,
-            top: -80,
-          }}
-        ></div>
-        <div
-          style={{
+
+        <div style={{
             position: "absolute",
             width: "100%",
             zIndex: 0,
-            top: -80,
-          }}
-        >
-          <div
-            style={{
+            top:0,
+          }}>
+
+          <div style={{
               position: "fixed",
               display: "flex",
               flexDirection: "row",
               justifyContent: "flex-start",
               alignItems: "flex-start",
-            }}
-          >
+            }} >
+              <div style={{
+                      position: "absolute",
+                      width: "100%",
+                      height: "100%",
+                      backgroundColor: "#000",
+                      opacity: 0.6,
+                      zIndex: 2,
+                  }}>
+
+              </div>
             <img
               alt={"artega"}
               style={{ alignSelf: "center", width: 1200 }}
               src={background}
             />
           </div>
+
         </div>
+
+
         <div
           style={{
             margin: `0 auto`,
             maxWidth: 900,
             padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
+            paddingTop: 30,
             position: "relative",
             zIndex: 10,
           }}

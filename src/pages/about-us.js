@@ -4,8 +4,8 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import arthur from "../images/arthur.png";
-import artem from "../images/artem.png";
+import arthur from "../images/arthur.webp";
+import artem from "../images/artem.webp";
 
 const AboutUsPage = () => (
   <Layout>
@@ -15,7 +15,6 @@ const AboutUsPage = () => (
       style={{
         marginTop: 100,
         marginBottom: 40,
-        fontWeight: 400,
         fontSize: 30,
         opacity: 0.9,
         fontWeight: 600,
