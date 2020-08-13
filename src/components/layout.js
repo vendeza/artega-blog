@@ -12,7 +12,7 @@ import { StaticQuery, graphql } from "gatsby";
 import Header from "./header";
 import "./layout.css";
 import { relative } from "path";
-import background from "../images/bg1.webp";
+import background from "../images/bg1.jpg";
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`

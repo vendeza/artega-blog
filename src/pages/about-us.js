@@ -4,8 +4,8 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import arthur from "../images/arthur.webp";
-import artem from "../images/artem.webp";
+import arthur from "../images/arthur.png";
+import artem from "../images/artem.png";
 
 const AboutUsPage = () => (
   <Layout>

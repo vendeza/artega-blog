@@ -3,10 +3,10 @@ import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import servize from "../images/e1.webp";
-import battery from "../images/e2.webp";
-import ezenciel from "../images/e3.webp";
-import lumberwell from "../images/e4.webp";
+import servize from "../images/e1.jpg";
+import battery from "../images/e2.jpg";
+import ezenciel from "../images/e3.jpg";
+import lumberwell from "../images/e4.jpg";
 
 const SecondPage = () => (
   <Layout>
