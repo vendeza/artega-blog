@@ -41,7 +41,7 @@ const Image = ({name}) => (
               childImageSharp {
                 # Specify the image processing specifications right in the query.
                 # Makes it trivial to update as your page's design changes.
-                fixed(width: 2400) {
+                fixed(height: 1000) {
                   ...GatsbyImageSharpFixed
                 }
               }
