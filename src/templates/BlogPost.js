@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -14,11 +14,7 @@ const BlogPostTemplate = ({ data }) => (
     <p>
       Written by {data.wordpressPost.author.name} on {data.wordpressPost.date}
     </p>
-    {/* <Img
-      sizes={data.wordpressPost.acf.feat_img.localFile.childImageSharp.sizes}
-      alt={data.wordpressPost.title}
-      style={{ maxHeight: 450 }}
-    /> */}
+
     <div
       style={{ marginTop: 20, color: "#eee" }}
       dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}

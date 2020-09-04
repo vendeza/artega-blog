@@ -1,6 +1,6 @@
 import { StaticQuery, graphql, Link } from "gatsby";
 import React from "react";
-import Img from "gatsby-image";
+import Image from '../components/image';
 import logo from "../images/artega_logo.png";
 const Header = () => (
   <StaticQuery
@@ -45,7 +45,8 @@ const Header = () => (
                   alignItems: "center",
                 }}
               >
-                <img src={logo} style={{ height: 50, width: 50 }} />
+
+                <Image name={"logo"}/>
                 <div
                   style={{
                     display: "flex",
@@ -103,18 +104,18 @@ const Header = () => (
                 About us
               </Link>
             </li>
-            <li>
-              <Link
-                to="/page-2/"
-                style={{
-                  marginLeft: 20,
-                  fontSize: 14,
-                  color: `#bbb`,
-                }}
-              >
-                Blog
-              </Link>
-            </li>
+            {/*<li>*/}
+            {/*  <Link*/}
+            {/*    to="/blog/"*/}
+            {/*    style={{*/}
+            {/*      marginLeft: 20,*/}
+            {/*      fontSize: 14,*/}
+            {/*      color: `#bbb`,*/}
+            {/*    }}*/}
+            {/*  >*/}
+            {/*    Blog*/}
+            {/*  </Link>*/}
+            {/*</li>*/}
             {/* {data.wordpressWpApiMenusMenusItems.items.map(item => (
               <li key={item.object_slug} style={{ margin: `0 10px` }}>
                 <Link

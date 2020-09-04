@@ -82,7 +82,7 @@ const AboutUsPage = () => (
               Artem A.
             </p>
             <p style={{ color: "#aaa", marginTop: 0, fontSize: 14 }}>
-              Manager, UX/UI
+              Manager, UX/UI designer, developer
             </p>
           </Link>
         </div>
@@ -95,9 +95,7 @@ const AboutUsPage = () => (
       Our career covers about 10 years of experience in IT in medical, pharmacy,
       game industries, and bank.
       <br /> <br />
-      The last project is the EZENCIEL (app for skincare). It's helping people
-      who have problems with their skin or just want to be more beautiful.
-      <br /> <br />
+
       We provide the next things:
       <br />
       <br />

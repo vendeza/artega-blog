@@ -41,7 +41,7 @@ module.exports = {
         perPage: 100,
         searchAndReplaceContentUrls: {
           sourceUrl: "http://avanesyan.beget.tech",
-          replacementUrl: "https://localhost:8000",
+          replacementUrl: "https://localhost:8001",
         },
         // Set how many simultaneous requests are sent at once.
         concurrentRequests: 10,

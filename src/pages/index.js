@@ -1,14 +1,11 @@
 import React from "react";
-import { Link } from "gatsby";
+import {graphql, Link} from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import servize from "../images/e1.jpg";
-import battery from "../images/e2.jpg";
-import ezenciel from "../images/e3.jpg";
-import lumberwell from "../images/e4.jpg";
+import Image from '../components/image';
 
-const SecondPage = () => (
+const SecondPage = ({data}) => (
   <Layout>
     <SEO title="Page two" />
     <h1
@@ -37,66 +34,16 @@ const SecondPage = () => (
       Works
     </h1>
     <div className="works" style={{ display: "flex" }}>
-      <div className="work">
-        <Link
-          to={`https://play.google.com/store/apps/details?id=com.rnbookingapp&hl=ru`}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            color: "white",
-            textDecoration: "none",
-            textAlign: "center",
-          }}
-        >
-          <img alt={"artega"} src={servize} />
-        </Link>
-      </div>
-      <div className="work" style={{ marginLeft: 0 }}>
-        <Link
-          to={`https://apps.apple.com/gb/app/800battery/id1516528654`}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            color: "white",
-            textDecoration: "none",
-            textAlign: "center",
-          }}
-        >
-          <img src={battery} />
-        </Link>
-      </div>
-      <div className="work" style={{ marginLeft: 0 }}>
-        <Link
-          to={`https://apps.apple.com/ru/app/ezenciel/id1479058033`}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            color: "white",
-            textDecoration: "none",
-            textAlign: "center",
-          }}
-        >
-          <img alt={"artega"} src={ezenciel} />
-        </Link>
-      </div>
-      <div className="work" style={{ marginLeft: 0 }}>
-        <Link
-          to={`https://play.google.com/store/apps/details?id=com.holybyte.lumber.well`}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            color: "white",
-            textDecoration: "none",
-            textAlign: "center",
-          }}
-        >
-          <img alt={"artega"} src={lumberwell} />
-        </Link>
-      </div>
-    </div>{" "}
-    <Link style={{ color: "#eee" }} to={`/works/`}>
-      more
-    </Link>
+        {data.allWordpressPost.edges.map(post => (
+        <Link key={post.node.slug} className="work" to={`/app/${post.node.slug}`} >
+
+             <Image name={`${post.node.slug}`}/>
+             <p>{post.node.title}</p>
+
+         </Link>
+     ))}
+    </div>
+
     <h1
       style={{
         marginTop: 100,
@@ -114,30 +61,11 @@ const SecondPage = () => (
         color: "#eee",
       }}
     >
-      <li>We discuss your business problems or ideas.</li>
-      <li>We deep research your business area</li>
-      <li>We suggest you the best solution</li>
-      <li>We create estimate document and discuss it with you</li>
-      <li>
-        Here we start to develop an application using {"  "}
-        <Link
-          style={{
-            color: "#aaa",
-          }}
-          to="https://en.wikipedia.org/wiki/Continuous_delivery"
-        >
-          Continuous delivery
-        </Link>
-        <br /> and demonstrate to you the result after 1-2 weeks.
-      </li>
-      <li>
-        Continuously communicate with you <br />
-        Get a callback from your customers
-        <br />
-        Update fetures <br />
-        Fix bugs <br />
-        Add new features <br />
-      </li>
+      <li>Discuss your business problems</li>
+      <li>Deep research your business area</li>
+      <li>Suggest you the best solution</li>
+      <li>Create estimate document</li>
+      <li>Develop the app</li>
       <li>Support your app</li>
     </ul>
     <div
@@ -164,11 +92,31 @@ const SecondPage = () => (
         color: "#eee",
       }}
     >
-      <li>Mobile application start from: 800$ </li>
-      <li>Web application start from: 500$</li>
-      <li>UX/UI design start from: 500$</li>
+      <li>Mobile application start from: 990$ </li>
+      <li>Web application start from: 490$</li>
+      <li>UX/UI design start from: 490$</li>
     </ul>
   </Layout>
 );
+export default SecondPage
+export const query = graphql`
+  query {
+    allWordpressPost(filter: {categories: {elemMatch: {name: {eq: "app"}}}}) {
+      edges {
+        node {
+          title
+          excerpt
+          slug
+          wordpress_id
+          author {
+            name
+          }
+          date(formatString: "MMMM DD, YYYY")
+          
+        }
+      }
+    }
+  }
+`
 
-export default SecondPage;
+

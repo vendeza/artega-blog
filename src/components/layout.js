@@ -8,17 +8,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-
+import Image from '../components/image';
 import Header from "./header";
 import "./layout.css";
-import { relative } from "path";
-import background from "../images/bg1.jpg";
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
         site {
-          siteMetadata {
+          siteMetadata { 
             title
           }
         }
@@ -33,14 +32,16 @@ const Layout = ({ children }) => (
             width: "100%",
             zIndex: 0,
             top:0,
+            alignSelf: "center",
           }}>
 
           <div style={{
               position: "fixed",
               display: "flex",
               flexDirection: "row",
-              justifyContent: "flex-start",
-              alignItems: "flex-start",
+              justifyContent: "center",
+              alignItems: "center",
+              alignSelf: "center",
             }} >
               <div style={{
                       position: "absolute",
@@ -49,14 +50,15 @@ const Layout = ({ children }) => (
                       backgroundColor: "#000",
                       opacity: 0.6,
                       zIndex: 2,
+                  flex:1
                   }}>
 
               </div>
-            <img
-              alt={"artega"}
-              style={{ alignSelf: "center", width: 1200 }}
-              src={background}
-            />
+
+
+                <Image  name={'background'}/>
+
+
           </div>
 
         </div>
@@ -74,7 +76,7 @@ const Layout = ({ children }) => (
         >
           <main>{children}</main>
           <footer
-            style={{ color: "#eee", height: 80, bottom: 0, marginTop: 100 }}
+            style={{ color: "#eee", height: 80, bottom: 0, marginTop: 500 }}
           >
             © {new Date().getFullYear()}, Artega
           </footer>
