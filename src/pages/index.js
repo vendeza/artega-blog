@@ -36,9 +36,10 @@ const SecondPage = ({data}) => (
     <div className="works" style={{ display: "flex" }}>
         {data.allWordpressPost.edges.map(post => (
         <Link key={post.node.slug} className="work" to={`/app/${post.node.slug}`} >
-
-             <Image name={`${post.node.slug}`}/>
-             <p>{post.node.title}</p>
+            <div>
+                 <Image  name={`${post.node.slug}`}/>
+                 <p>{post.node.title}</p>
+            </div>
 
          </Link>
      ))}

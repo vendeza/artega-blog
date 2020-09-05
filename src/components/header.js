@@ -1,7 +1,7 @@
 import { StaticQuery, graphql, Link } from "gatsby";
 import React from "react";
 import Image from '../components/image';
-import logo from "../images/artega_logo.png";
+
 const Header = () => (
   <StaticQuery
     query={graphql`

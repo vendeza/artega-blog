@@ -57,6 +57,25 @@ const Image = ({name}) => (
               }
             }
             
+            appStore: file(relativePath: { eq: "appStoreIcon.png" }) {
+              childImageSharp {
+                # Specify the image processing specifications right in the query.
+                # Makes it trivial to update as your page's design changes.
+                fixed(width: 150) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            
+            googlePlay: file(relativePath: { eq: "googlePlayIcon.png" }) {
+              childImageSharp {
+                # Specify the image processing specifications right in the query.
+                # Makes it trivial to update as your page's design changes.
+                fixed(width: 150) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
       `}
 
@@ -70,6 +89,12 @@ const Image = ({name}) => (
                   return <Img style={{height:1180, width:1400}} fixed={data.background.childImageSharp.fixed}/>
               case 'logo':
                   return <Img style={{height:50, width:50}} fixed={data.logo.childImageSharp.fixed}/>
+              case 'appStore':
+                  return <Img fixed={data.appStore.childImageSharp.fixed}/>
+              case 'googlePlay':
+                  return <Img fixed={data.googlePlay.childImageSharp.fixed}/>
+              default:
+                  return <p>{"Image is not found"}</p>
           }
 
 

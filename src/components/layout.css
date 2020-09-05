@@ -6,24 +6,83 @@ html {
 .works {
   flex-wrap: wrap;
 }
+
 .work {
-  margin-left:10px;
-  padding:50px;
+  padding:30px 0 10px 10px;
+  margin-top:10px;
+  margin-left: 10px;
   background-color:rgba(100,100,100,0.2);
+
+  -webkit-transition: background-color 0.7s ease-out;
+  -moz-transition: background-color 0.7s ease-out;
+  -o-transition: background-color 0.7s ease-out;
+  transition: background-color 0.7s ease-out;
+
+  cursor: pointer;
+
   display: flex;
   flex-direction: column;
   color: white;
   text-decoration: none;
+  justify-content: center;
+  align-items: center;
 }
+
+.work p {
+  margin-left:14px;
+  font-weight: 600;
+  font-size: 20px;
+  color:#ccc;
+}
+
+
+@media screen and (max-width:640px){
+  .work{
+    width:100%;
+    margin-left: 0px;
+
+  }
+
+}
+
 .work:first-child {
   margin-left:0;
 }
 
 .work:hover {
-  margin-left:10;
-  padding:50px;
   background-color:rgba(100,100,100,0.8);
+  -webkit-transition: background-color 0.4s ease-out;
+  -moz-transition: background-color 0.4s ease-out;
+  -o-transition: background-color 0.4s ease-out;
+  transition: background-color 0.4s ease-out;
 }
+
+.store-link{
+  cursor: pointer;
+  -webkit-transition: opacity 0.4s ease-out;
+  -moz-transition: opacity 0.4s ease-out;
+  -o-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
+}
+.store-link:hover{
+  cursor: pointer;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.4s ease-out;
+  -moz-transition: opacity 0.4s ease-out;
+  -o-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
+}
+.content-app-description{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.content-app-description-stores{
+  display: flex;
+  flex-direction: row;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;

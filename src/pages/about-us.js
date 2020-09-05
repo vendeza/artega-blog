@@ -15,13 +15,13 @@ const AboutUsPage = () => (
       style={{
         marginTop: 100,
         marginBottom: 40,
-        fontSize: 30,
+        fontSize: 40,
         opacity: 0.9,
         fontWeight: 600,
         color: "#eee",
       }}
     >
-      About us
+      ABOUT US
     </h1>
     <p
       style={{
@@ -41,15 +41,7 @@ const AboutUsPage = () => (
         }}
       >
         <div className="employee">
-          <Link
-            to={`/`}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              color: "white",
-              textDecoration: "none",
-            }}
-          >
+
             <img
               alt={"artega"}
               style={{ color: "#aaa", marginTop: 20, width: 130 }}
@@ -61,18 +53,9 @@ const AboutUsPage = () => (
             <p style={{ color: "#aaa", marginTop: 0, fontSize: 14 }}>
               Alfa Developer, Quality Qeen, Evil genius
             </p>
-          </Link>
         </div>
         <div className="employee" style={{}}>
-          <Link
-            to={`/`}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              color: "white",
-              textDecoration: "none",
-            }}
-          >
+
             <img
               alt={"artega"}
               style={{ color: "#aaa", marginTop: 20, width: 130 }}
@@ -84,7 +67,6 @@ const AboutUsPage = () => (
             <p style={{ color: "#aaa", marginTop: 0, fontSize: 14 }}>
               Manager, UX/UI designer, developer
             </p>
-          </Link>
         </div>
       </div>
       <br /> <br />
@@ -121,13 +103,13 @@ const AboutUsPage = () => (
       It means that your app will work right and your business will give you
       profit.
       <br /> <br />
-      <b>We concern about your business.</b>
+
       <br /> <br />
-      So, let's work!
-      <br /> <br />
-      Thanks,
-      <br />
-      Artega.
+      So,
+        <br /> <br />
+        <br /> <br />
+        let's work!
+
     </p>
   </Layout>
 );

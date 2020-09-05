@@ -1,8 +1,9 @@
 import React from "react"
-import { graphql } from "gatsby"
+import {graphql, Link} from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Image from '../components/image';
 
 const AppDescriptionTemplate = ({ data }) => (
     <Layout>
@@ -10,13 +11,31 @@ const AppDescriptionTemplate = ({ data }) => (
             title={data.wordpressPost.title}
             description={data.wordpressPost.excerpt}
         />
-        <h1 style={{marginTop:60}}>{data.wordpressPost.title}</h1>
-        <Img style={{marginTop:80}} fixed={data.imageSharp.fixed}/>
 
-        <div
-            style={{ marginTop: 20, color: "#eee" }}
-            dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}
-        />
+        <div className="content-app-description">
+                <div style={{flex:1}}>
+                     <Img style={{marginTop:80, width:380, marginLeft:-14}} fixed={data.imageSharp.fixed}/>
+                </div>
+                <div  style={{ flex:1 }}>
+                        <h1 style={{marginTop:40, marginBottom:0}}>{data.wordpressPost.title}</h1>
+                        <div
+                            style={{ marginTop: 0, color: "#eee" }}
+                            dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}
+                        />
+                        <div className="content-app-description-stores">
+                                <Link className="store-link" to={`https://play.google.com/store/apps/details?id=com.rnbookingapp`}  target="_blank">
+                                        <div>
+                                           <Image style={{}} name={`googlePlay`}/>
+                                        </div>
+                                </Link>
+                                <Link className="store-link" to={`https://apps.apple.com/ru/app/ezenciel/id1479058033`} target="_blank" >
+                                        <div style={{ marginLeft:10}}>
+                                            <Image  name={`appStore`}/>
+                                        </div>
+                                 </Link>
+                        </div>
+                </div>
+        </div>
     </Layout>
 )
 export default AppDescriptionTemplate
