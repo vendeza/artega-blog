@@ -14,23 +14,24 @@ const Header = () => (
     render={(data) => (
       <header
         style={{
-          top: 30,
+          top: 0,
           position: "relative",
           zIndex: 12,
-          marginBottom: `1.45rem`,
+          paddingLeft:40,
+          paddingTop:15,
+          paddingBottom:15
         }}
       >
         <div
           style={{
-            margin: `0 auto`,
-            maxWidth: 900,
-            padding: `0.5rem 0.5rem 0.5rem 1.45rem`,
+            maxWidth: 600,
+
             display: `flex`,
             justifyContent: `space-between`,
             alignItems: `center`,
           }}
         >
-          <h1 style={{ margin: 0 }}>
+          <h4 style={{ margin: 0 }}>
             <Link
               to="/"
               style={{
@@ -55,29 +56,12 @@ const Header = () => (
                     marginLeft: 10,
                   }}
                 >
-                  {/* <p style={{ marginBottom: 0, marginLeft: 10, fontSize: 14 }}>
-                    web & mobile tech
-                  </p> */}
-                  {/* <p
-                    style={{
-                      marginTop: 1,
-                      marginBottom: 0,
-                      marginLeft: 10,
-                      fontSize: 15,
-                    }}
-                  >
-                    for your business
-                  </p> */}
+
                 </div>
               </div>
-              {/* {data.wordpressSiteMetadata.name} */}
-              {/* <Img
-                  sizes={post.node.acf.feat_img.localFile.childImageSharp.sizes}
-                  alt={post.node.title}
-                  style={{ width: "25%", marginRight: 20 }}
-                /> */}
+
             </Link>
-          </h1>
+          </h4>
 
           <ul style={{ listStyle: `none`, display: `flex`, margin: 0 }}>
             <li>
@@ -104,32 +88,7 @@ const Header = () => (
                 About us
               </Link>
             </li>
-            {/*<li>*/}
-            {/*  <Link*/}
-            {/*    to="/blog/"*/}
-            {/*    style={{*/}
-            {/*      marginLeft: 20,*/}
-            {/*      fontSize: 14,*/}
-            {/*      color: `#bbb`,*/}
-            {/*    }}*/}
-            {/*  >*/}
-            {/*    Blog*/}
-            {/*  </Link>*/}
-            {/*</li>*/}
-            {/* {data.wordpressWpApiMenusMenusItems.items.map(item => (
-              <li key={item.object_slug} style={{ margin: `0 10px` }}>
-                <Link
-                  to={`/${item.object_slug}`}
-                  style={{
-                    color: `white`,
-                    textDecoration: `none`,
-                    fontFamily: `sans-serif`,
-                  }}
-                >
-                  {item.title}
-                </Link>
-              </li>
-            ))} */}
+
           </ul>
         </div>
       </header>

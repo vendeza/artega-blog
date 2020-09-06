@@ -58,9 +58,7 @@ const SecondPage = ({data}) => (
       How we work
     </h1>
     <ul
-      style={{
-        color: "#eee",
-      }}
+
     >
       <li>Discuss your business problems</li>
       <li>Deep research your business area</li>
@@ -89,9 +87,7 @@ const SecondPage = ({data}) => (
       Prices
     </h1>
     <ul
-      style={{
-        color: "#eee",
-      }}
+
     >
       <li>Mobile application start from: 990$ </li>
       <li>Web application start from: 490$</li>

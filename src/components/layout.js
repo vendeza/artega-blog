@@ -56,7 +56,7 @@ const Layout = ({ children }) => (
               </div>
 
 
-                <Image  name={'background'}/>
+                {/*<Image  name={'background'}/>*/}
 
 
           </div>
@@ -66,12 +66,13 @@ const Layout = ({ children }) => (
 
         <div
           style={{
-            margin: `0 auto`,
-            maxWidth: 900,
-            padding: `0px 1.0875rem 1.45rem`,
+
+            maxWidth: 1200,
+            padding: `40px 20px 20px 40px`,
             paddingTop: 30,
             position: "relative",
             zIndex: 10,
+            background:"#F2F2F2"
           }}
         >
           <main>{children}</main>

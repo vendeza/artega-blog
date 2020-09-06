@@ -51,7 +51,7 @@ const Image = ({name}) => (
               childImageSharp {
                 # Specify the image processing specifications right in the query.
                 # Makes it trivial to update as your page's design changes.
-                fixed(width: 2400) {
+                fixed(width: 50) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -88,7 +88,7 @@ const Image = ({name}) => (
               case 'background':
                   return <Img style={{height:1180, width:1400}} fixed={data.background.childImageSharp.fixed}/>
               case 'logo':
-                  return <Img style={{height:50, width:50}} fixed={data.logo.childImageSharp.fixed}/>
+                  return <Img style={{height:40, width:40}} fixed={data.logo.childImageSharp.fixed}/>
               case 'appStore':
                   return <Img fixed={data.appStore.childImageSharp.fixed}/>
               case 'googlePlay':

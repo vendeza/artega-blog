@@ -18,15 +18,12 @@ const AboutUsPage = () => (
         fontSize: 40,
         opacity: 0.9,
         fontWeight: 600,
-        color: "#eee",
       }}
     >
       ABOUT US
     </h1>
     <p
-      style={{
-        color: "#ddd",
-      }}
+
     >
       Hello, we are Artega.
       <br /> <br />
@@ -44,13 +41,13 @@ const AboutUsPage = () => (
 
             <img
               alt={"artega"}
-              style={{ color: "#aaa", marginTop: 20, width: 130 }}
+              style={{ marginTop: 20, width: 130 }}
               src={arthur}
             />
-            <p style={{ color: "#eee", marginTop: 20, marginBottom: 0 }}>
+            <p style={{ marginTop: 20, marginBottom: 0 }}>
               Arthur A.
             </p>
-            <p style={{ color: "#aaa", marginTop: 0, fontSize: 14 }}>
+            <p style={{  marginTop: 0, fontSize: 14 }}>
               Alfa Developer, Quality Qeen, Evil genius
             </p>
         </div>
@@ -58,13 +55,13 @@ const AboutUsPage = () => (
 
             <img
               alt={"artega"}
-              style={{ color: "#aaa", marginTop: 20, width: 130 }}
+              style={{  marginTop: 20, width: 130 }}
               src={artem}
             />
-            <p style={{ color: "#eee", marginTop: 20, marginBottom: 0 }}>
+            <p style={{ marginTop: 20, marginBottom: 0 }}>
               Artem A.
             </p>
-            <p style={{ color: "#aaa", marginTop: 0, fontSize: 14 }}>
+            <p style={{  marginTop: 0, fontSize: 14 }}>
               Manager, UX/UI designer, developer
             </p>
         </div>
