@@ -17,7 +17,7 @@ const AppDescriptionTemplate = ({ data }) => (
                     <Image style={{}} name={`${data.wordpressPost.title}desktop`}/>
                      {/*<Img style={{marginTop:80, width:380, marginLeft:-14}} fixed={data.imageSharp.fixed}/>*/}
                 </div>
-                <div style={{ flex:1, maxWidth: 450 }}>
+                <div className="content-app-description-text" >
                         <h1 style={{marginTop:0, marginBottom:40}}>{data.wordpressPost.title}</h1>
                         <div
                             style={{ marginTop: 0, color: "#eee", marinTop:20 }}

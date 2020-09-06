@@ -4,6 +4,9 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+h1, h2, h3, h4 {
+  color:#111 !important;
+}
 header{
   position: fixed;
   z-index: 12;
@@ -54,15 +57,15 @@ nav{
 }
 
 .work {
-  padding:30px 0 10px 10px;
+  padding:0;
   margin-top:40px;
   margin-left: 40px;
-  background-color: rgb(217, 224, 205);
 
-  -webkit-transition: background-color 0.7s ease-out;
-  -moz-transition: background-color 0.7s ease-out;
-  -o-transition: background-color 0.7s ease-out;
-  transition: background-color 0.7s ease-out;
+
+  -webkit-transition: opacity 0.7s ease-out;
+  -moz-transition: opacity 0.7s ease-out;
+  -o-transition: opacity 0.7s ease-out;
+  transition: opacity 0.7s ease-out;
 
   cursor: pointer;
 
@@ -75,7 +78,9 @@ nav{
 }
 
 .work p {
-  margin-left:14px;
+  text-align: left;
+  align-self: flex-start;
+  margin-top: 10px;
   font-weight: 600;
   font-size: 20px;
   color:#111;
@@ -84,7 +89,7 @@ nav{
 
 @media screen and (max-width:640px){
   .work{
-    width:100%;
+
     margin-left: 0px;
 
   }
@@ -97,11 +102,12 @@ nav{
 
 .work:hover {
   cursor: pointer;
-  background-color: rgb(190, 196, 179);
-  -webkit-transition: background-color 0.4s ease-out;
-  -moz-transition: background-color 0.4s ease-out;
-  -o-transition: background-color 0.4s ease-out;
-  transition: background-color 0.4s ease-out;
+  opacity:0.7;
+
+  -webkit-transition: opacity 0.4s ease-out;
+  -moz-transition: opacity 0.4s ease-out;
+  -o-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
 }
 
 .store-link{
@@ -140,6 +146,7 @@ nav{
 .workCoverImage{
   width: 90%!important;
   min-width: 300px;
+  max-height: 400px;
 }
 
 .layout-wrapper{
@@ -149,16 +156,26 @@ nav{
   z-index: 10;
   background: #f2f2f2;
 }
-@media screen and (max-width:640px){
+
+.content-app-description-text{
+  flex:1; max-width: 450px; margin-left:20px;
+}
+
+@media screen and (max-width:770px){
   .layout-wrapper{
     padding: 140px 15px 20px 15px;
 
   }
-}
+  .workCoverImage{
+    width: 300px!important;
+    max-height: 300px;
+  }
 
-@media screen and (max-width:640px){
   .content-app-description{
     margin-top:20px;
+  }
+  .content-app-description-text{
+    flex:1; max-width: 450px; margin-left:0px; margin-top: 20px;
   }
 }
 

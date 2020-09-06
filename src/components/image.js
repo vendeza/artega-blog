@@ -18,6 +18,37 @@ const Image = ({name}) => (
   <StaticQuery
       query={graphql`
         query { 
+            servizeCover: file(relativePath: { eq: "servize-cover.jpg" }) {
+              childImageSharp {
+                # Specify the image processing specifications right in the query.
+                # Makes it trivial to update as your page's design changes.
+                fixed(width: 600) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            
+            ezencielCover: file(relativePath: { eq: "ezenciel-cover.jpg" }) {
+              childImageSharp {
+                # Specify the image processing specifications right in the query.
+                # Makes it trivial to update as your page's design changes.
+                fixed(width: 600) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            
+            byroadCover: file(relativePath: { eq: "byroad-cover.jpg" }) {
+              childImageSharp {
+                # Specify the image processing specifications right in the query.
+                # Makes it trivial to update as your page's design changes.
+                fixed(width: 600) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+        
+        
             ezenciel: file(relativePath: { eq: "ez.png" }) {
               childImageSharp {
                 # Specify the image processing specifications right in the query.
@@ -51,6 +82,15 @@ const Image = ({name}) => (
                 # Specify the image processing specifications right in the query.
                 # Makes it trivial to update as your page's design changes.
                 fixed(width: 400) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            byroadDesktop: file(relativePath: { eq: "byroad-cover.jpg" }) {
+              childImageSharp {
+                # Specify the image processing specifications right in the query.
+                # Makes it trivial to update as your page's design changes.
+                fixed(width: 800) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -100,6 +140,12 @@ const Image = ({name}) => (
 
       render={data => {
           switch(name.toLowerCase()){
+              case 'servizecover':
+                  return <Img style={{width:278, height:278}} fixed={data.servizeCover.childImageSharp.fixed}/>
+              case 'ezencielcover':
+                  return <Img style={{width:278, height:278}} fixed={data.ezencielCover.childImageSharp.fixed}/>
+              case 'byroadcover':
+                  return <Img style={{width:278, height:278}} fixed={data.byroadCover.childImageSharp.fixed}/>
               case 'ezenciel':
                   return <Img fixed={data.ezenciel.childImageSharp.fixed}/>
               case 'servize':
@@ -108,6 +154,8 @@ const Image = ({name}) => (
                   return <Img  className="workCoverImage"fixed={data.ezencielDesktop.childImageSharp.fixed}/>
               case 'servizedesktop':
                   return <Img  className="workCoverImage" fixed={data.servizeDesktop.childImageSharp.fixed}/>
+              case 'byroaddesktop':
+                  return <Img  className="workCoverImage" fixed={data.byroadDesktop.childImageSharp.fixed}/>
               case 'background':
                   return <Img  style={{marginLeft:1000,height:900, width:900}} fixed={data.background.childImageSharp.fixed}/>
               case 'logo':
