@@ -13,13 +13,14 @@ const AppDescriptionTemplate = ({ data }) => (
         />
 
         <div className="content-app-description">
-                <div style={{flex:1}}>
-                     <Img style={{marginTop:80, width:380, marginLeft:-14}} fixed={data.imageSharp.fixed}/>
+                <div style={{flex:1,maxWidth:450}}>
+                    <Image style={{}} name={`${data.wordpressPost.title}desktop`}/>
+                     {/*<Img style={{marginTop:80, width:380, marginLeft:-14}} fixed={data.imageSharp.fixed}/>*/}
                 </div>
-                <div  style={{ flex:1 }}>
-                        <h1 style={{marginTop:40, marginBottom:0}}>{data.wordpressPost.title}</h1>
+                <div style={{ flex:1, maxWidth: 450 }}>
+                        <h1 style={{marginTop:0, marginBottom:40}}>{data.wordpressPost.title}</h1>
                         <div
-                            style={{ marginTop: 0, color: "#eee" }}
+                            style={{ marginTop: 0, color: "#eee", marinTop:20 }}
                             dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}
                         />
                         <div className="content-app-description-stores">

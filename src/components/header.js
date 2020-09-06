@@ -12,26 +12,11 @@ const Header = () => (
       }
     `}
     render={(data) => (
-      <header
-        style={{
-          top: 0,
-          position: "relative",
-          zIndex: 12,
-          paddingLeft:40,
-          paddingTop:15,
-          paddingBottom:15
-        }}
-      >
+      <header>
         <div
-          style={{
-            maxWidth: 600,
-
-            display: `flex`,
-            justifyContent: `space-between`,
-            alignItems: `center`,
-          }}
+          className="innerHeader"
         >
-          <h4 style={{ margin: 0 }}>
+          <h4 style={{ margin: 0, }}>
             <Link
               to="/"
               style={{
@@ -39,57 +24,59 @@ const Header = () => (
                 textDecoration: `none`,
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
+
 
                 <Image name={"logo"}/>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    marginLeft: 10,
-                  }}
-                >
 
-                </div>
-              </div>
 
             </Link>
           </h4>
+          <nav>
+              <ul style={{ listStyle: `none`, display:'flex', marginBottom:0,
+                  flexDirection:'row',
+                  alignItems:'center', justifyContent:'center',
+                  flexWrap:'wrap', paddingRight:20}}>
+                <li>
+                  <Link
+                    to="/"
+                    style={{
+                      marginLeft: 20,
+                      fontSize: 14,
+                      color: `#bbb`,
+                        flex:1,
+                    }}
+                  >
+                    Works
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/about-us/"
+                    style={{
+                      marginLeft: 40,
+                      fontSize: 14,
+                      color: `#bbb`,
+                    }}
+                  >
+                    Prices
+                  </Link>
+                </li>
 
-          <ul style={{ listStyle: `none`, display: `flex`, margin: 0 }}>
-            <li>
-              <Link
-                to="/"
-                style={{
-                  marginLeft: 20,
-                  fontSize: 14,
-                  color: `#bbb`,
-                }}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about-us/"
-                style={{
-                  marginLeft: 20,
-                  fontSize: 14,
-                  color: `#bbb`,
-                }}
-              >
-                About us
-              </Link>
-            </li>
+                  <li>
+                      <Link
+                          to="/about-us/"
+                          style={{
+                              marginLeft: 40,
+                              fontSize: 14,
+                              color: `#bbb`,
+                          }}
+                      >
+                          About us
+                      </Link>
+                  </li>
 
-          </ul>
+              </ul>
+          </nav>
         </div>
       </header>
     )}

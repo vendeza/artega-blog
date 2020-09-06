@@ -37,6 +37,25 @@ const Image = ({name}) => (
               }
             }
             
+            ezencielDesktop: file(relativePath: { eq: "ez.png" }) {
+              childImageSharp {
+                # Specify the image processing specifications right in the query.
+                # Makes it trivial to update as your page's design changes.
+                fixed(width: 400) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            servizeDesktop: file(relativePath: { eq: "servize.png" }) {
+              childImageSharp {
+                # Specify the image processing specifications right in the query.
+                # Makes it trivial to update as your page's design changes.
+                fixed(width: 400) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            
             background: file(relativePath: { eq: "bg1.jpg" }) {
               childImageSharp {
                 # Specify the image processing specifications right in the query.
@@ -61,7 +80,7 @@ const Image = ({name}) => (
               childImageSharp {
                 # Specify the image processing specifications right in the query.
                 # Makes it trivial to update as your page's design changes.
-                fixed(width: 150) {
+                fixed(width: 120) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -71,7 +90,7 @@ const Image = ({name}) => (
               childImageSharp {
                 # Specify the image processing specifications right in the query.
                 # Makes it trivial to update as your page's design changes.
-                fixed(width: 150) {
+                fixed(width: 120) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -80,21 +99,25 @@ const Image = ({name}) => (
       `}
 
       render={data => {
-          switch(name){
+          switch(name.toLowerCase()){
               case 'ezenciel':
                   return <Img fixed={data.ezenciel.childImageSharp.fixed}/>
               case 'servize':
-                  return <Img fixed={data.servize.childImageSharp.fixed}/>
+                  return <Img  fixed={data.servize.childImageSharp.fixed}/>
+              case 'ezencieldesktop':
+                  return <Img  className="workCoverImage"fixed={data.ezencielDesktop.childImageSharp.fixed}/>
+              case 'servizedesktop':
+                  return <Img  className="workCoverImage" fixed={data.servizeDesktop.childImageSharp.fixed}/>
               case 'background':
-                  return <Img style={{height:1180, width:1400}} fixed={data.background.childImageSharp.fixed}/>
+                  return <Img  style={{marginLeft:1000,height:900, width:900}} fixed={data.background.childImageSharp.fixed}/>
               case 'logo':
                   return <Img style={{height:40, width:40}} fixed={data.logo.childImageSharp.fixed}/>
-              case 'appStore':
+              case 'appstore':
                   return <Img fixed={data.appStore.childImageSharp.fixed}/>
-              case 'googlePlay':
+              case 'googleplay':
                   return <Img fixed={data.googlePlay.childImageSharp.fixed}/>
               default:
-                  return <p>{"Image is not found"}</p>
+                  return <p>{`Image ${name} is not found`}</p>
           }
 
 
