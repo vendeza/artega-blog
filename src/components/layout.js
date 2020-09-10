@@ -24,34 +24,8 @@ const Layout = ({ children }) => (
       }
     `}
     render={(data) => (
-      <div style={{ position: "relative",  backgroundColor:"#000" }}>
+      <div className="main-wrapper">
         <Header siteTitle={data.site.siteMetadata.title} />
-
-        {/*<div style={{*/}
-        {/*    position: "absolute",*/}
-        {/*    width: "100%",*/}
-        {/*    zIndex: 0,*/}
-        {/*    top:0,*/}
-        {/*    alignSelf: "center",*/}
-        {/*  }}>*/}
-
-        {/*  <div style={{*/}
-        {/*      position: "fixed",*/}
-        {/*      display: "flex",*/}
-        {/*      flexDirection: "row",*/}
-        {/*      justifyContent: "center",*/}
-        {/*      alignItems: "center",*/}
-        {/*      alignSelf: "center",*/}
-        {/*    }} >*/}
-        {/*     */}
-
-
-        {/*        <Image  name={'background'}/>*/}
-
-
-        {/*  </div>*/}
-
-        {/*</div>*/}
 
 
         <div

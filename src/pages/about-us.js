@@ -12,12 +12,6 @@ const AboutUsPage = () => (
     <SEO title="Page two" />
 
     <h1
-      style={{
-        marginBottom: 40,
-        fontSize: 60,
-        opacity: 0.9,
-        fontWeight: 600,
-      }}
     >
         Crafting awesome mobile apps
     </h1>
@@ -46,29 +40,10 @@ const AboutUsPage = () => (
             </ul>
         </div>
 
-        <div className="info-block">
-            <h2
-                style={{
-                    marginTop: 100,
-                    marginBottom: 40,
-                    fontSize: 40,
-                    fontWeight: 600,
-                    opacity: 0.9,
-                }}
-            >
-                Prices
-            </h2>
-            <ul
 
-            >
-                <li>Mobile application start from: 990$ </li>
-                <li>Web application start from: 490$</li>
-                <li>UX/UI design start from: 490$</li>
-            </ul>
-       </div>
         <div className="info-block">
             <p>
-              <br /> <br />
+              <br />
               Our primary focus is helping small and medium-sized enterprises to resolve
               different problems using applications development for IOS and Android
               platforms and web browsers.
@@ -80,6 +55,7 @@ const AboutUsPage = () => (
               We provide the next things:
               <br />
               <br />
+            </p>
               <ul>
                 <li>
                   Development app from idea, prototype, MVP to release and publishing
@@ -95,6 +71,7 @@ const AboutUsPage = () => (
                   design is working for your customers.
                 </li>
               </ul>
+        <p>
               <br />
               Our code is hight quality, stable, and testable, because we use the best
               practices.
@@ -113,6 +90,7 @@ const AboutUsPage = () => (
               display: "flex",
               justifyContent: "flex-start",
               flexWrap: "wrap",
+              marginLeft:20
           }}
       >
           <div className="employee" style={{flex:1}}>

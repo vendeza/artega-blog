@@ -16,17 +16,18 @@ const Header = () => (
         <div
           className="innerHeader"
         >
-          <h4 style={{ margin: 0, }}>
+          <h4  className="logo" >
             <Link
               to="/"
+
               style={{
-                color: `#eee`,
+                color: `#111`,
                 textDecoration: `none`,
               }}
             >
 
-
-                <Image name={"logo"}/>
+                ARTEGA
+                {/*<Image name={"logo"}/>*/}
 
 
             </Link>
@@ -39,37 +40,17 @@ const Header = () => (
                 <li>
                   <Link
                     to="/"
-                    style={{
-                      marginLeft: 20,
-                      fontSize: 14,
-                      color: `#bbb`,
-                        flex:1,
-                    }}
+                    className="nav-link"
                   >
                     Works
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    to="/about-us/"
-                    style={{
-                      marginLeft: 40,
-                      fontSize: 14,
-                      color: `#bbb`,
-                    }}
-                  >
-                    Prices
-                  </Link>
-                </li>
+
 
                   <li>
                       <Link
                           to="/about-us/"
-                          style={{
-                              marginLeft: 40,
-                              fontSize: 14,
-                              color: `#bbb`,
-                          }}
+                          className="nav-link"
                       >
                           About us
                       </Link>

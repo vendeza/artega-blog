@@ -22,7 +22,7 @@ const Image = ({name}) => (
               childImageSharp {
                 # Specify the image processing specifications right in the query.
                 # Makes it trivial to update as your page's design changes.
-                fixed(width: 600) {
+                fixed(width: 800) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -32,7 +32,7 @@ const Image = ({name}) => (
               childImageSharp {
                 # Specify the image processing specifications right in the query.
                 # Makes it trivial to update as your page's design changes.
-                fixed(width: 600) {
+                fixed(width: 800) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -42,7 +42,7 @@ const Image = ({name}) => (
               childImageSharp {
                 # Specify the image processing specifications right in the query.
                 # Makes it trivial to update as your page's design changes.
-                fixed(width: 600) {
+                fixed(width: 800) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -141,11 +141,11 @@ const Image = ({name}) => (
       render={data => {
           switch(name.toLowerCase()){
               case 'servizecover':
-                  return <Img style={{width:278, height:278}} fixed={data.servizeCover.childImageSharp.fixed}/>
+                  return <Img className="workCoverImageMain" fixed={data.servizeCover.childImageSharp.fixed}/>
               case 'ezencielcover':
-                  return <Img style={{width:278, height:278}} fixed={data.ezencielCover.childImageSharp.fixed}/>
+                  return <Img className="workCoverImageMain"fixed={data.ezencielCover.childImageSharp.fixed}/>
               case 'byroadcover':
-                  return <Img style={{width:278, height:278}} fixed={data.byroadCover.childImageSharp.fixed}/>
+                  return <Img className="workCoverImageMain" fixed={data.byroadCover.childImageSharp.fixed}/>
               case 'ezenciel':
                   return <Img fixed={data.ezenciel.childImageSharp.fixed}/>
               case 'servize':

@@ -9,12 +9,7 @@ const SecondPage = ({data}) => (
   <Layout>
     <SEO title="Page two" />
     <h1
-      style={{
-        marginBottom: 50,
-        fontWeight: 600,
-        fontSize: 60,
-        opacity: 0.9,
-      }}
+
     >
       Select work
     </h1>
