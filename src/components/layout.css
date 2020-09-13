@@ -87,20 +87,15 @@ nav .nav-link {
   align-items: center;
 }
 
-@media screen and (max-width:1100px){
-  .work{
-    width:40%;
-  }
+.team{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left:20px;
 }
 
-@media screen and (max-width:700px){
-  .work{
-    width:100%;
-  }
-  .image-work, .workCoverImageMain{
-    height: 450px!important;
-  }
-}
+
+
 
 .work p {
   text-align: left;
@@ -110,48 +105,6 @@ nav .nav-link {
   font-size: 20px;
   color:#111;
 }
-
-
-@media screen and (max-width:640px){
-  .work{
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .image-work, .workCoverImageMain{
-    height: 400px!important;
-  }
-
-}
-
-@media screen and (max-width:400px){
-  header{
-    width:100%;
-    padding-left: 0px;
-    height:120px;
-  }
-
-  .main-wrapper{
-    margin-left:0px;
-  }
-  .innerHeader{
-
-    width: 100%;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: inherit;
-  }
-  nav{
-    margin-top:20px;
-  }
-
-  .image-work, .workCoverImageMain{
-    height: 260px!important;
-  }
-}
-
 
 .work:hover {
   cursor: pointer;
@@ -186,6 +139,7 @@ nav .nav-link {
   justify-content: flex-start;
   flex-wrap: wrap;
   width:inherit;
+  max-width: 1000px;
 }
 
 .content-app-description-stores{
@@ -198,9 +152,14 @@ nav .nav-link {
 .workCoverImage{
   width: 90%!important;
   min-width: 300px;
+  max-width: 400px;
   max-height: 400px;
 }
 
+.image-container{
+  margin-left: 20px;
+  max-width: 400px;
+}
 .layout-wrapper{
   max-width: 1200px;
   padding: 200px 20px 20px 20px;
@@ -218,13 +177,21 @@ nav .nav-link {
 .content-app-description h1{
   font-size: 50px;
   line-height: 30px;
+  margin-left: 0;
 }
 .content-app-description-text{
-  flex:1; max-width: 450px; margin-left:20px;
+  flex:1; max-width: 800px; margin-left:20px;
 }
 .logo{
   margin:0;
 }
+
+@media screen and (max-width:1100px){
+  .work{
+    width:40%;
+  }
+}
+
 
 @media screen and (max-width:770px){
 
@@ -237,11 +204,157 @@ nav .nav-link {
     max-height: 300px;
   }
 
+  .content-app-description-text{
+    margin-top:0px;
+  }
   .content-app-description{
     margin-top:20px;
   }
   .content-app-description-text{
-    flex:1; max-width: 450px; margin-left:0px; margin-top: 20px;
+    flex:1; max-width: 450px; margin-left:20px;
+  }
+}
+
+@media screen and (max-width:700px){
+  .work{
+    width:100%;
+  }
+  .image-work, .workCoverImageMain{
+    height: 450px!important;
+  }
+
+  .content-app-description-text{
+    margin-top: 20px;
+  }
+
+}
+
+@media screen and (max-width:640px){
+  .work{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .image-work, .workCoverImageMain{
+    height: 400px!important;
+  }
+
+}
+
+@media screen and (max-width:540px){
+  header{
+    width:100%;
+    padding-left: 0px;
+    height:120px;
+  }
+
+  .layout-wrapper h1{
+    font-size: 43px;
+    line-height: 1.0930232558em;
+    margin-left: 0;
+  }
+
+  .main-wrapper{
+    margin-left:0px;
+  }
+  .innerHeader{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: inherit;
+  }
+  nav{
+    margin-top:20px;
+  }
+
+  .image-container{
+    margin-left: 0;
+  }
+  .innerHeader, innerHeader h4,nav, nav ul, nav ul li{
+    margin-left: 0;
+  }
+
+  .innerHeader ul li a {
+    font-size: 16px;
+  }
+  .innerHeader ul {
+    margin-left: -22px;
+  }
+
+  .innerHeader h4.logo{
+    font-size: 20px;
+  }
+
+  .image-work, .workCoverImageMain{
+    height: 345px!important;
+  }
+
+  .workCoverImage{
+    width: 100% !important;
+    max-height: 345px!important;
+  }
+
+  .content-app-description .content-app-description-text h1{
+    font-size: 43px;
+  }
+  .layout-wrapper .info-block{
+    margin-left: 0;
+  }
+
+  .team{
+    margin-left: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .team .employee{
+    text-align: center;
+  }
+
+  .content-app-description-text{
+    margin-left: 0;
+  }
+}
+
+
+
+@media screen and (max-width:375px){
+
+  .workCoverImage .image-container{
+    max-width:200px!important;
+    min-width: 100px!important;
+  }
+}
+
+@media screen and (max-width:320px){
+  .image-work, .workCoverImageMain{
+    height: 300px!important;
+    min-width: 100px!important;
+  }
+
+  .workCoverImage .image-container{
+    max-width:200px!important;
+    min-width: 100px!important;
+  }
+
+  .workCoverImage{
+    min-width:200px!important;
+    width: 100% !important;
+    max-height: 300px!important;
+  }
+}
+
+@media screen and (max-width:280px){
+  .image-work, .workCoverImageMain{
+    height: 240px!important;
+    min-width: 100px!important;
+  }
+
+  .workCoverImage{
+    max-height: 240px!important;
   }
 }
 

@@ -12,6 +12,7 @@ const AboutUsPage = () => (
     <SEO title="Page two" />
 
     <h1
+        style={{maxWidth:800}}
     >
         Crafting awesome mobile apps
     </h1>
@@ -85,16 +86,9 @@ const AboutUsPage = () => (
 
       <div
           className="team"
-          style={{
 
-              display: "flex",
-              justifyContent: "flex-start",
-              flexWrap: "wrap",
-              marginLeft:20
-          }}
       >
           <div className="employee" style={{flex:1}}>
-
               <img
                   alt={"artega"}
                   style={{ marginTop: 20, width: 130 }}

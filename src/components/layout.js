@@ -34,9 +34,9 @@ const Layout = ({ children }) => (
         >
           <main>{children}</main>
           <footer
-            style={{height: 80, bottom: 0, marginTop: 500 }}
+            style={{height: 60, bottom: 0, marginTop: 40 }}
           >
-              <p>
+              <p style={{ marginLeft: 20, fontSize:13 }}>
             © {new Date().getFullYear()}, Artega
               </p>
           </footer>

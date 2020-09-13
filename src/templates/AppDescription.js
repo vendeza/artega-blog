@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from '../components/image';
+import StoreLink from "../components/storeLink";
 
 const AppDescriptionTemplate = ({ data }) => (
     <Layout>
@@ -13,7 +14,7 @@ const AppDescriptionTemplate = ({ data }) => (
         />
 
         <div className="content-app-description">
-                <div style={{flex:1,maxWidth:450}}>
+                <div className="image-container" style={{flex:1}}>
                     <Image style={{}} name={`${data.wordpressPost.title}desktop`}/>
                      {/*<Img style={{marginTop:80, width:380, marginLeft:-14}} fixed={data.imageSharp.fixed}/>*/}
                 </div>
@@ -23,18 +24,7 @@ const AppDescriptionTemplate = ({ data }) => (
                             style={{ marginTop: 0, color: "#eee", marinTop:20 }}
                             dangerouslySetInnerHTML={{ __html: data.wordpressPost.content }}
                         />
-                        <div className="content-app-description-stores">
-                                <Link className="store-link" to={`https://play.google.com/store/apps/details?id=com.rnbookingapp`}  target="_blank">
-                                        <div>
-                                           <Image style={{}} name={`googlePlay`}/>
-                                        </div>
-                                </Link>
-                                <Link className="store-link" to={`https://apps.apple.com/ru/app/ezenciel/id1479058033`} target="_blank" >
-                                        <div style={{ marginLeft:10}}>
-                                            <Image  name={`appStore`}/>
-                                        </div>
-                                 </Link>
-                        </div>
+                        <StoreLink name={data.wordpressPost.title}/>
                 </div>
         </div>
     </Layout>

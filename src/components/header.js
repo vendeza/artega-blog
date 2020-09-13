@@ -27,8 +27,6 @@ const Header = () => (
             >
 
                 ARTEGA
-                {/*<Image name={"logo"}/>*/}
-
 
             </Link>
           </h4>
