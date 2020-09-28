@@ -53,6 +53,15 @@ const Header = () => (
                           About us
                       </Link>
                   </li>
+                  
+                  <li>
+                      <Link
+                          to="/blog/"
+                          className="blog"
+                      >
+                          About us
+                      </Link>
+                  </li>
 
               </ul>
           </nav>
