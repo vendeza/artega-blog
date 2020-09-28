@@ -57,9 +57,9 @@ const Header = () => (
                   <li>
                       <Link
                           to="/blog/"
-                          className="blog"
+                          className="nav-link"
                       >
-                          About us
+                          Blog
                       </Link>
                   </li>
 
