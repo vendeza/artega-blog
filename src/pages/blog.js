@@ -47,18 +47,23 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    allWordpressPost {
-      edges {
-        node {
-          title
-          excerpt
-          slug
-          author {
-            name
+    
+      allWordpressPost(filter: {categories: {elemMatch: {name: {eq: "blog"}}}}) {
+        edges { 
+          node {
+            title
+            excerpt
+            slug
+            author {
+              name
+            }
+            date(formatString: "MMMM DD, YYYY")
+            categories {
+              name
+            }
           }
-          date(formatString: "MMMM DD, YYYY")
         }
       }
-    }
+    
   }
 `
