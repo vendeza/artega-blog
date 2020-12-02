@@ -8,10 +8,10 @@ import Image from '../components/image';
 const SecondPage = ({data}) => (
   <Layout>
     <SEO title="Page two" />
+    <h3>We develop eCommerce mobile apps for your business</h3>
     <h1
-
     >
-      Select work
+      Works
     </h1>
     <div className="works" style={{ display: "flex" }}>
         {data.allWordpressPost.edges.map(post => (

@@ -165,7 +165,16 @@ const StoreLink = ({name}) => (
                     </div>
                 case 'byroad':
                     return <div className="content-app-description-stores">
-
+                        <Link className="store-link" to={`https://play.google.com/store/apps/details?id=com.byroad&hl=ru&gl=US`}  target="_blank">
+                           <div>
+                               <Img fixed={data.googlePlay.childImageSharp.fixed}/>
+                           </div>
+                       </Link>
+                       <Link className="store-link" to={`https://apps.apple.com/us/app/byroad-drive/id1532709482`} target="_blank" >
+                           <div style={{ marginLeft:10}}>
+                               <Img fixed={data.appStore.childImageSharp.fixed}/>
+                           </div>
+                       </Link>
                     </div>
 
                 default:
