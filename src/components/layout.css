@@ -13,7 +13,7 @@ header{
   height:70px;
   width: 1200px;
   background: #f1f1f1;
-  padding-left: 30px;
+  padding-left: 40px;
 
 }
 
@@ -196,9 +196,11 @@ nav .nav-link {
 
 
 @media screen and (max-width:770px){
-
+  header{
+    padding-left:40px;
+  }
   .layout-wrapper{
-    padding: 140px 15px 20px 15px;
+    padding: 140px 15px 20px 60px;
 
   }
   .workCoverImage{
@@ -255,6 +257,10 @@ nav .nav-link {
     margin-left: 0;
   }
 
+  .layout-wrapper{
+    padding: 140px 15px 20px 15px;
+
+  }
   .main-wrapper{
     margin-left:0px;
   }
